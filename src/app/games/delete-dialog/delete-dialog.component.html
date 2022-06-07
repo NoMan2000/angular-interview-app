@@ -1,0 +1,11 @@
+<div  class="wrapper">
+  <h2 mat-dialog-title>Warning</h2>
+  <div mat-dialog-content class="permanent">
+    This will permanently remove game {{displayId}}. Are you sure?
+  </div>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button (click)="delete()" color="warn" mat-button [mat-dialog-close]="true" cdkFocusInitial>Delete</button>
+  </mat-dialog-actions>
+
+</div>

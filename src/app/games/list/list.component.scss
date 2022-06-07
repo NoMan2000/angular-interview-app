@@ -1,0 +1,78 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-wrapper {
+  max-width: 450px;
+  flex-basis: 400px;
+  margin: 15px 30px;
+  &:first-of-type {
+    // margin-left: 0;
+  }
+}
+.card-group {
+  margin: 20px 0;
+}
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.label {
+  margin-right: 10px;
+}
+.winner {
+  border-radius: 15px;
+  max-width: 400px;
+  padding: 15px;
+  margin: 20px 10px;
+  background: mat.get-color-from-palette(mat.$teal-palette, 50);
+  color: mat.get-color-from-palette(mat.$teal-palette, 500);
+}
+.score {
+  font-weight: bold;
+}
+.badge-holder {
+  width: max-content;
+  background: mat.get-color-from-palette(mat.$cyan-palette, 50);
+  color: mat.get-color-from-palette(mat.$cyan-palette, 500);
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 5px;
+}
+.mat-badge-content {
+  background: mat.get-color-from-palette(mat.$cyan-palette, 700);
+}
+.badges {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+h2 {
+  margin-bottom: 0;
+}
+.wrapper {
+  max-width: 1024px;
+}
+.new {
+  flex: 1;
+}
+.home {
+  flex: 1;
+}

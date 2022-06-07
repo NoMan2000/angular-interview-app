@@ -1,0 +1,27 @@
+<div class="update-form">
+  <h1>{{ isEdit ? "Editing Game " + displayId : "Creating" }}</h1>
+  <div>
+    The winner will have ten points.  The loser can have up to seven.
+  </div>
+  <form class="form" action="post">
+    <div [formGroup]="formGroup">
+      <mat-form-field class="playerOne" appearance="fill">
+        <mat-label>Player One Score</mat-label>
+        <input min="0" max="10" type="number" matInput placeholder="0" formControlName="playerOne">
+      </mat-form-field>
+      <mat-form-field class="playerTwo" appearance="fill">
+        <mat-label>Player Two Score</mat-label>
+        <input min="0" max="10" type="number" matInput placeholder="0" formControlName="playerTwo">
+      </mat-form-field>
+    </div>
+
+    <div class="row-reverse">
+      <button type="button" (click)="submit()" [disabled]="!isValid()" mat-button>
+        Submit
+      </button>
+      <a href="/games" mat-button>
+        Go Back
+      </a>
+    </div>
+  </form>
+</div>

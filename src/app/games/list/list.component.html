@@ -1,0 +1,86 @@
+<div class="wrapper" *ngIf="games.length">
+  <h1>Total Wins</h1>
+  <div class="row">
+    <div class="badges">
+      <div class="badge-holder">
+        <span
+          data-automation-id="total-wins-player-one"
+          [matBadge]="getTotalWinsPlayerOne()"
+          matBadgeOverlap="false"
+          >{{ playerOneName() }} wins</span
+        >
+      </div>
+      <div class="badge-holder">
+        <span
+          data-automation-id="total-wins-player-two"
+          [matBadge]="getTotalWinsPlayerTwo()"
+          matBadgeOverlap="false"
+          >{{ playerTwoName() }} wins</span
+        >
+      </div>
+    </div>
+    <div class="home">
+      <a href="/"type="button" [disableRipple]="true" mat-icon-button aria-label="">
+        Go Home <mat-icon>home</mat-icon>
+      </a>
+    </div>
+    <div class="new">
+      <a [disableRipple]="true" href="/games/create"type="button" mat-icon-button aria-label="">
+        Create new <mat-icon>add</mat-icon>
+      </a>
+    </div>
+  </div>
+  <h2>Games</h2>
+  <div class="wrap">
+    <div class="card-wrapper" *ngFor="let game of games; index as i">
+      <mat-card class="card-group">
+        <div class="row">
+          <div class="column">
+            <div class="form-group">
+              <div [attr.data-automation-id]="'player-name-' + i" class="label">
+                {{ playerOneName() + ": " }}
+              </div>
+              <div
+                [attr.data-automation-id]="'player-score-' + i"
+                class="score"
+              >
+                {{ game.playerOne }}
+              </div>
+            </div>
+            <div class="form-group">
+              <div [attr.data-automation-id]="'player-name-' + i" class="label">
+                {{ playerTwoName() + ": " }}
+              </div>
+              <div
+                [attr.data-automation-id]="'player-score-' + i"
+                class="score"
+              >
+                {{ game.playerTwo }}
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div [attr.data-automation-id]="'winner-' + i" class="winner">
+              {{ getWinner(game.playerOne, game.playerTwo) }}
+            </div>
+          </div>
+        </div>
+
+        <div class="edit-game">
+          <a
+            [href]="'/games/edit/' + i"
+            type="button"
+            [attr.data-automation-id]="'player-name-' + i"
+            mat-button
+            color="primary"
+          >
+            Edit Game {{ i + 1 }}
+          </a>
+          <button type="button" (click)="delete(i)" mat-button color="warn">
+            Delete Game {{ i + 1 }}
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
