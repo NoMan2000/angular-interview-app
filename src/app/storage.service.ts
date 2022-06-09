@@ -21,8 +21,8 @@ export class StorageService {
    */
 
   constructor() {
-    const games = this.read(this.GAMES, []);
-    if (!games || !games.length) {
+    const games = this.read(this.GAMES, '');
+    if (!games || !Array.isArray(games)) {
       this.resetGames();
     }
   }

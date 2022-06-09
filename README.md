@@ -12,4 +12,10 @@ Deleting a game shows a confirmation box that asks the user to confirm.
 
 The `/player` route allows the user to change the names of the two players.
 
-The goal is to be a simple, yet still functionally useful app to test users against.  This branch is the final product of the demo.
+## Rubric
+
+The goal is to be a simple, yet still functionally useful app to test users against.
+
+When solving this demo, the actual solutions are almost irrelevant.  We would much rather see how you go about solving the problems and how you work through the problems than see a successful solution.
+
+There are stubbed methods in the `.ts` sections of each folder.  The `storageService` is a simple localStorage solution for persisting changes throughout the page.
