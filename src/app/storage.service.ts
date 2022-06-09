@@ -21,23 +21,27 @@ export class StorageService {
    */
 
   constructor() {
-    const games = this.read(this.GAMES, undefined);
-    if (!games) {
-      this.write(this.GAMES, [
-        {
-          playerOne: 6,
-          playerTwo: 10,
-        },
-        {
-          playerOne: 10,
-          playerTwo: 7,
-        },
-        {
-          playerTwo: 5,
-          playerOne: 10,
-        },
-      ]);
+    const games = this.read(this.GAMES, []);
+    if (!games || !games.length) {
+      this.resetGames();
     }
+  }
+
+  resetGames() {
+    this.write(this.GAMES, [
+      {
+        playerOne: 6,
+        playerTwo: 10,
+      },
+      {
+        playerOne: 10,
+        playerTwo: 7,
+      },
+      {
+        playerTwo: 5,
+        playerOne: 10,
+      },
+    ]);
   }
 
   getGames() {
@@ -83,7 +87,7 @@ export class StorageService {
     if (!item && fallback) {
       return fallback;
     }
-    if (!item && !fallback) {
+    if (!item && fallback == null) {
       throw new Error('If the item is not set, a fallback must be supplied');
     }
     return JSON.parse(item as string) as T;
