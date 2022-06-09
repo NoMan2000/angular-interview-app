@@ -47,4 +47,9 @@ describe('ListComponent', () => {
     const totalWins = component.getTotalWinsPlayerOne();
     expect(totalWins).toEqual(2);
   });
+  it('Should be able to get player ones name.', () => {
+    storageService.updatePlayerOneName('bob');
+    const playerOneName = component.playerOneName();
+    expect(playerOneName).toBe('bob');
+  });
 });
