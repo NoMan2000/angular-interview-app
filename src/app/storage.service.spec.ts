@@ -13,7 +13,4 @@ describe('StorageService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-  /**
-   * TODO:  Add in the create, read, update, delete portions.
-   */
 });
