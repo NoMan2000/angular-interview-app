@@ -18,7 +18,7 @@ export class ListComponent implements OnInit {
   playerTwoName(): string {
     return '';
   }
-  getWinner() {
+  getWinner(): number {
     return 0;
   }
   getTotalWinsPlayerOne(): number {

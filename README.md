@@ -21,3 +21,10 @@ When solving this demo, the actual solutions are almost irrelevant.  We would mu
 There are stubbed methods in the `.ts` sections of each folder.  If you can find an alternate solution, then you may use that.
 
 The `storageService` is a simple localStorage solution for persisting changes throughout the page.  It already has the methods you will need to successfully solve each section.
+
+Each of the folders has a `tasks.md` file that details what you need to do.  In order of easiest to hardest:
+
+- Home
+- Player
+- List
+- Update
