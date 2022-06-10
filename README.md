@@ -14,8 +14,10 @@ The `/player` route allows the user to change the names of the two players.
 
 ## Rubric
 
-The goal is to be a simple, yet still functionally useful app to test users against.
+The goal is to for this to be a simple, yet still functionally useful app to test users against.  You are not expected to complete all of it.
 
-When solving this demo, the actual solutions are almost irrelevant.  We would much rather see how you go about solving the problems and how you work through the problems than see a successful solution.
+When solving this demo, the actual solutions are almost irrelevant.  We would much rather see how you go about solving the problems and how you work through the problems than see a successful solution without understanding your methodology.
 
-There are stubbed methods in the `.ts` sections of each folder.  The `storageService` is a simple localStorage solution for persisting changes throughout the page.
+There are stubbed methods in the `.ts` sections of each folder.  If you can find an alternate solution, then you may use that.
+
+The `storageService` is a simple localStorage solution for persisting changes throughout the page.  It already has the methods you will need to successfully solve each section.
