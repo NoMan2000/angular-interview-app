@@ -1,6 +1,6 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
-@import '@angular/material/theming';
+// @import '@angular/material/theming';
 
 .permanent {
   background: mat.get-color-from-palette(mat.$red-palette, 50);
