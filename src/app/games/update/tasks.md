@@ -9,3 +9,4 @@
 - On successful submission, this redirects the user to the home page.
 - Should work on either of two routes:  `/games/{gameId}` or `/games/new`
 - If an id is passed in, then the component should display the information for that game.
+- Updates should use the `StorageService` to make the updates and get the current information.
